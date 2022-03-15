@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: webFrontEnd
+    image: node:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - "../WebFrontEnd:/var"
+    command: bash -c "cd var/out && node index.js"
